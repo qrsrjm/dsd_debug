@@ -3,11 +3,11 @@
 #include "debug.h"
 
 static const char * const log_level_names[] = {
-	"ERR",
-	"WARN",
-	"NOTICE",
-	"INFO",
-	"DEBUG",
+	"\033[31mERR\033[0m",
+	"\033[33mWARN\033[0m",
+	"\033[35mNOTICE\033[0m",
+	"\033[32mINFO\033[0m",
+	"\033[37mDEBUG\033[0m",
 };
 
 int log_level = DSD_ERR;
