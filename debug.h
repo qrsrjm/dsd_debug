@@ -52,8 +52,8 @@ int dsd_log_filter(int filter);
 #define dsdl_err(format, args...) \
 	do {\
 		if (dsd_log_filter(DSD_ERR)) {\
-			fprintf(stderr, "[%s->%s->%d] ",__FILE__,__func__,__LINE__);\
-			fprintf(stderr, format, ##args);\
+			fprintf(stderr, "\033[31m" "[%s->%s->%d] ""\033[0m",__FILE__,__func__,__LINE__);\
+			fprintf(stderr, "\033[31m" format "\033[0m", ##args);\
 		}\
 	}while(0)
 
